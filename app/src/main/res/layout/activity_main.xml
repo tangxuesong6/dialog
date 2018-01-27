@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.dialog.MainActivity">
+    >
     <Button
+        android:layout_marginTop="50dp"
         android:onClick="show"
-        android:text="show"
+        android:text="show Dialog"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
 

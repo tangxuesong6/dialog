@@ -19,10 +19,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    /**Button的 onclick方法 相当于findviewbyid.setOnClickListener 即Button的点击监听*/
+
+    /**
+     * Button的 onclick方法 相当于findviewbyid.setOnClickListener 即Button的点击监听
+     */
     public void show(View view) {
-        View view1 = this.getLayoutInflater().inflate(R.layout.background_dialog,null);
-        final Dialog dialog = new Dialog(this,R.style.MyCommonDialog);
+        View view1 = this.getLayoutInflater().inflate(R.layout.background_dialog, null);
+        final Dialog dialog = new Dialog(this, R.style.MyCommonDialog);
         dialog.setContentView(view1);
         dialog.show();
         //放在show()之后，不然有些属性是没有效果的，比如height和width
@@ -42,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
         //下面注掉的代码可以用来设置Dialog透明度
 //        p.alpha = 0.5f;
         dialogWindow.setAttributes(p);
-        // 设置显示位置
-        dialog.onWindowAttributesChanged(p);
         // 设置点击外围解散
         dialog.setCanceledOnTouchOutside(true);
         //自定义布局里面的两个按钮
