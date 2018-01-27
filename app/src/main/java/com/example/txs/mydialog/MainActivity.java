@@ -24,12 +24,15 @@ public class MainActivity extends AppCompatActivity {
      * Button的 onclick方法 相当于findviewbyid.setOnClickListener 即Button的点击监听
      */
     public void show(View view) {
+        //引入自定义布局
         View view1 = this.getLayoutInflater().inflate(R.layout.background_dialog, null);
+        //自定义的style 在里面进行了圆角背景的设置
         final Dialog dialog = new Dialog(this, R.style.MyDialogStyle);
         dialog.setContentView(view1);
         dialog.show();
         //放在show()之后，不然有些属性是没有效果的，比如height和width
         Window dialogWindow = dialog.getWindow();
+        //Dialog 进出场动画
         dialogWindow.setWindowAnimations(R.style.MyDialogAnination);
         WindowManager m = getWindowManager();
         // 获取屏幕宽、高
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "点击了取消", Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
+                dialog.cancel();
             }
         });
         mTvSure.setOnClickListener(new View.OnClickListener() {

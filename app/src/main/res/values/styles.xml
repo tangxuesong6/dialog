@@ -25,7 +25,9 @@
     </style>
     <!-- 对话框显示和退出动画 -->
     <style name="MyDialogAnination">
+        <!--入场动画-->
         <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!--出场动画-->
         <item name="android:windowExitAnimation">@anim/dialog_exit</item>
     </style>
 
