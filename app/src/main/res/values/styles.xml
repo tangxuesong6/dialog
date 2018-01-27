@@ -7,7 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="MyCommonDialog" parent="android:Theme.Dialog">
+    <style name="MyDialogStyle" parent="android:Theme.Dialog">
         <!-- 背景颜色及透明程度 -->
         <item name="android:windowBackground">@android:color/transparent</item>
         <!-- 是否半透明 -->
@@ -20,9 +20,11 @@
         <item name="android:backgroundDimEnabled">true</item>
         <!-- 设置背景模糊的透明度-->
         <item name="android:backgroundDimAmount">0.5</item>
+        <!--背景 10dp的圆角-->
+        <item name="android:background">@drawable/shape_10dp</item>
     </style>
     <!-- 对话框显示和退出动画 -->
-    <style name="dialog_animation">
+    <style name="MyDialogAnination">
         <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
         <item name="android:windowExitAnimation">@anim/dialog_exit</item>
     </style>

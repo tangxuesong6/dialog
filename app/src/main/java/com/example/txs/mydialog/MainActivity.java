@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
      */
     public void show(View view) {
         View view1 = this.getLayoutInflater().inflate(R.layout.background_dialog, null);
-        final Dialog dialog = new Dialog(this, R.style.MyCommonDialog);
+        final Dialog dialog = new Dialog(this, R.style.MyDialogStyle);
         dialog.setContentView(view1);
         dialog.show();
         //放在show()之后，不然有些属性是没有效果的，比如height和width
         Window dialogWindow = dialog.getWindow();
-        dialogWindow.setWindowAnimations(R.style.dialog_animation);
+        dialogWindow.setWindowAnimations(R.style.MyDialogAnination);
         WindowManager m = getWindowManager();
         // 获取屏幕宽、高
         Display d = m.getDefaultDisplay();
